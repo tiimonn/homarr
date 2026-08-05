@@ -12,6 +12,8 @@ type IntegrationOfKind<TKind extends IntegrationKind> = Omit<Integration, "kind"
 
 interface Options<TData, TKind extends IntegrationKind, TInput extends Record<string, unknown>> {
   requestAsync: (integration: IntegrationOfKind<TKind>, input: TInput) => Promise<TData>;
+  cacheTtlMs?: number;
+  fallbackToStaleOnError?: boolean;
 }
 
 export const createIntegrationRequestHandler = <
@@ -24,6 +26,8 @@ export const createIntegrationRequestHandler = <
   handler: (integration: IntegrationOfKind<TKind>, itemOptions: TInput) => {
     const inner = createRequestHandler<TData, { integrationId: string; options: TInput }>({
       requestAsync: async (input) => options.requestAsync(integration, input.options),
+      cacheTtlMs: options.cacheTtlMs,
+      fallbackToStaleOnError: options.fallbackToStaleOnError,
     });
     return inner.handler({ integrationId: integration.id, options: itemOptions });
   },
