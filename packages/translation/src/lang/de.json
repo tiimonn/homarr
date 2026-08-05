@@ -2428,10 +2428,21 @@
         },
         "descendingDefaultSort": {
           "label": "Sortierung umkehren"
+        },
+        "columnOrder": {
+          "label": ""
+        },
+        "columnWidths": {
+          "label": ""
         }
       },
       "error": {
-        "internalServerError": "Fehler beim Abrufen der Container Statistiken"
+        "internalServerError": "Fehler beim Abrufen der Container Statistiken",
+        "layoutSaveTitle": "",
+        "layoutSaveMessage": ""
+      },
+      "empty": {
+        "noContainers": ""
       }
     },
     "coolify": {
@@ -2725,7 +2736,19 @@
         "showOnlyPlaying": {
           "label": "Nur aktuelle Wiedergabe anzeigen",
           "description": "Diese Einstellung zu deaktivieren wird für Plex nicht funktionieren"
+        },
+        "showBitrate": {
+          "label": "",
+          "description": ""
+        },
+        "showLocation": {
+          "label": "",
+          "description": ""
         }
+      },
+      "footer": {
+        "streams": "",
+        "totalBitrate": ""
       },
       "items": {
         "currentlyPlaying": "Aktuelle Wiedergabe",
@@ -2734,6 +2757,9 @@
         "id": "Id",
         "status": "Status",
         "directPlay": "Direkte Wiedergabe",
+        "directStream": "",
+        "transcodeVideo": "",
+        "transcodeAudio": "",
         "transcoding": "Transkodierung",
         "paused": "Pausiert",
         "remaining": "{minutes} Min. verbleibend",
@@ -3768,18 +3794,6 @@
           "label": "Songs anzeigen",
           "description": "Zeigt die Gesamtzahl der Titel in deiner Musikbibliothek an (Navidrome)"
         },
-        "showNowPlaying": {
-          "label": "\"Sie hören\" anzeigen",
-          "description": "Zeige aktuell gespielte Titel an (Navidrome)"
-        },
-        "showNowPlayingList": {
-          "label": "\"Sie hören jetzt\" Wiedergabeliste anzeigen",
-          "description": "Einzelne Tracks anstelle der aktiven Streamanzahl anzeigen (Navidrome)"
-        },
-        "maxNowPlayingItems": {
-          "label": "Maximale jetzt abgespielte Elemente",
-          "description": "Maximale Anzahl an Titeln, die in der \"Sie hören jetzt\" Wiedergabeliste angezeigt werden (Navidrome)"
-        },
         "showLibraryCount": {
           "label": "Anzahl der Bibliotheken anzeigen",
           "description": "Zeige die Anzahl der Bibliotheken in deiner Instanz (Hörbücherregal)"
@@ -3813,8 +3827,6 @@
       "podcasts": "Podcasts",
       "listeningTime": "Hördauer",
       "activeSessions": "Aktive Sitzungen",
-      "nowPlaying": "Aktuelle Wiedergabe",
-      "nowPlayingCount": "{count, plural, one {# stream} other {# streams}}",
       "error": {
         "internalServerError": "Fehler beim Abrufen der Audio-Statistikdaten"
       }
@@ -3954,11 +3966,19 @@
         },
         "showAgent": {
           "label": "Agent-Version anzeigen"
+        },
+        "columnOrder": {
+          "label": ""
+        },
+        "columnWidths": {
+          "label": ""
         }
       },
       "noRecords": "Keine Systeme gefunden",
       "error": {
-        "internalServerError": "Keine Verbindung zu Beszel. Überprüfen Sie Ihre Integrationseinstellungen."
+        "internalServerError": "Keine Verbindung zu Beszel. Überprüfen Sie Ihre Integrationseinstellungen.",
+        "layoutSaveTitle": "",
+        "layoutSaveMessage": ""
       },
       "column": {
         "system": "System",
@@ -5356,6 +5376,7 @@
       },
       "remove": {
         "label": "Entfernen",
+        "confirm": "",
         "notification": {
           "success": {
             "title": "Container entfernt",
